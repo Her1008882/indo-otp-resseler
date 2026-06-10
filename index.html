@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Digital Service Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+min-height:100vh;
+overflow-x:hidden;
+color:white;
+background:
+radial-gradient(circle at top left,#7c3aed 0%,transparent 35%),
+radial-gradient(circle at bottom right,#2563eb 0%,transparent 35%),
+linear-gradient(135deg,#050816,#0f172a,#111827);
+}
+
+body::before{
+content:'';
+position:fixed;
+width:500px;
+height:500px;
+background:#8b5cf6;
+border-radius:50%;
+filter:blur(180px);
+top:-150px;
+left:-150px;
+opacity:.35;
+z-index:-1;
+}
+
+body::after{
+content:'';
+position:fixed;
+width:500px;
+height:500px;
+background:#3b82f6;
+border-radius:50%;
+filter:blur(180px);
+bottom:-150px;
+right:-150px;
+opacity:.35;
+z-index:-1;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+.hero{
+padding:70px 20px;
+text-align:center;
+}
+
+.logo{
+font-size:4rem;
+font-weight:800;
+background:linear-gradient(
+90deg,
+#60a5fa,
+#8b5cf6,
+#22d3ee
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+margin-top:10px;
+color:#cbd5e1;
+font-size:1rem;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 35px;
+border-radius:999px;
+text-decoration:none;
+color:white;
+font-weight:600;
+background:linear-gradient(
+90deg,
+#3b82f6,
+#8b5cf6
+);
+box-shadow:0 8px 20px rgba(99,102,241,.4);
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-bottom:40px;
+}
+
+.stat-card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.12);
+border-radius:24px;
+padding:25px;
+text-align:center;
+transition:.3s;
+}
+
+.stat-card:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 40px rgba(99,102,241,.25);
+}
+
+.stat-card h3{
+font-size:2rem;
+font-weight:800;
+background:linear-gradient(
+90deg,
+#60a5fa,
+#8b5cf6
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.stat-card p{
+margin-top:8px;
+color:#cbd5e1;
+}
+
+.section-title{
+text-align:center;
+font-size:2rem;
+margin:50px 0 30px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.12);
+border-radius:24px;
+padding:25px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 40px rgba(99,102,241,.25);
+}
+
+.badge{
+display:inline-block;
+padding:8px 15px;
+border-radius:999px;
+background:linear-gradient(
+90deg,
+#3b82f6,
+#8b5cf6
+);
+font-size:.8rem;
+margin-bottom:15px;
+}
+
+.card h2{
+margin-bottom:15px;
+}
+
+.price{
+font-size:2rem;
+font-weight:700;
+margin-bottom:15px;
+color:#60a5fa;
+}
+
+.features{
+list-style:none;
+}
+
+.features li{
+padding:10px 0;
+border-bottom:1px solid rgba(255,255,255,.08);
+color:#cbd5e1;
+}
+
+.card-btn{
+display:block;
+margin-top:20px;
+text-align:center;
+padding:12px;
+border-radius:14px;
+text-decoration:none;
+color:white;
+font-weight:600;
+background:linear-gradient(
+90deg,
+#3b82f6,
+#8b5cf6
+);
+}
+
+.footer{
+margin-top:60px;
+padding:30px;
+text-align:center;
+color:#94a3b8;
+}
+
+@media(max-width:768px){
+
+.logo{
+font-size:2.7rem;
+}
+
+.hero{
+padding:50px 15px;
+}
+
+.section-title{
+font-size:1.6rem;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="hero">
+
+<h1 class="logo">DIGITAL SERVICE</h1>
+
+<p class="subtitle">
+Platform layanan digital cepat, aman, dan terpercaya
+</p>
+
+<a href="#" class="btn">
+Mulai Sekarang
+</a>
+
+</div>
+
+<div class="stats">
+
+<div class="stat-card">
+<h3>Rp1.000.000+</h3>
+<p>Total Transaksi</p>
+</div>
+
+<div class="stat-card">
+<h3>300+</h3>
+<p>User Aktif</p>
+</div>
+
+<div class="stat-card">
+<h3>24/7</h3>
+<p>Support Online</p>
+</div>
+
+<div class="stat-card">
+<h3>99%</h3>
+<p>Kepuasan Pelanggan</p>
+</div>
+
+</div>
+
+<h2 class="section-title">
+Paket Layanan
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<span class="badge">Basic</span>
+
+<h2>Paket Starter</h2>
+
+<div class="price">
+Rp25.000
+</div>
+
+<ul class="features">
+<li>✔ Akses Dasar</li>
+<li>✔ Support Standar</li>
+<li>✔ Dashboard Premium</li>
+<li>✔ Update Berkala</li>
+</ul>
+
+<a href="#" class="card-btn">
+Pilih Paket
+</a>
+
+</div>
+
+<div class="card">
+
+<span class="badge">Popular</span>
+
+<h2>Paket Pro</h2>
+
+<div class="price">
+Rp50.000
+</div>
+
+<ul class="features">
+<li>✔ Semua Fitur Basic</li>
+<li>✔ Prioritas Support</li>
+<li>✔ Kecepatan Maksimal</li>
+<li>✔ Bonus Member</li>
+</ul>
+
+<a href="#" class="card-btn">
+Pilih Paket
+</a>
+
+</div>
+
+<div class="card">
+
+<span class="badge">Premium</span>
+
+<h2>Paket Enterprise</h2>
+
+<div class="price">
+Rp100.000
+</div>
+
+<ul class="features">
+<li>✔ Semua Fitur Pro</li>
+<li>✔ Dedicated Support</li>
+<li>✔ Full Access</li>
+<li>✔ Prioritas Utama</li>
+</ul>
+
+<a href="#" class="card-btn">
+Pilih Paket
+</a>
+
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 Digital Service. All Rights Reserved.
+</div>
+
+</div>
+
+</body>
+  </html>
